@@ -5,7 +5,7 @@ export const API_DATA:any = [
       title: 'Statistics',
       description: 'Get Statistics',
       method: 'GET',
-      url: '/delegateswebsitegetstatistics',
+      url: '/v1/xcash/dpops/unauthorized/stats/',
       result: [
         { "name": "most_total_rounds_delegate_name",
           "desc": "The delegate that has the most total rounds"
