@@ -56,7 +56,7 @@ export const API_DATA:any = [
       title: 'Get Delegates',
       description: 'Get a list of all delegates',
       method: 'GET',
-      url: '/getdelegates',
+      url: '/v1/xcash/dpops/unauthorized/delegates/active',
       result: [
         {
           "name":"total_vote_count",
