@@ -8,8 +8,8 @@ export class HttpdataService{
 
   constructor(private httpClient: HttpClient) {}
 
-  GET_STATISTICS:string = environment.apiEndPoint + "/delegateswebsitegetstatistics";
-  GET_DELEGATES:string = environment.apiEndPoint + "/getdelegates";
+  GET_STATISTICS:string = environment.apiEndPoint + "/v1/xcash/dpops/unauthorized/stats/";
+  GET_DELEGATES:string = environment.apiEndPoint + "/v1/xcash/dpops/unauthorized/delegates/active";
   GET_DELEGATES_STATISTICS:string = environment.apiEndPoint + "/getdelegatesstatistics";
   GET_DELEGATES_INFORMATION:string = environment.apiEndPoint + "/getdelegatesinformation";
   GET_DELEGATES_VOTERS_LIST:string = environment.apiEndPoint + "/getdelegatesvoterslist";
