@@ -7,31 +7,31 @@ export const API_DATA:any = [
       method: 'GET',
       url: '/v1/xcash/dpops/unauthorized/stats/',
       result: [
-        { "name": "most_total_rounds_delegate_name",
+        { "name": "mostTotalRoundsDelegateName",
           "desc": "The delegate that has the most total rounds"
         },{
-          "name": "most_total_rounds",
+          "name": "mostTotalRounds",
           "desc": "The most total rounds by a delegate"
         },{
-          "name": "best_block_verifier_online_percentage_delegate_name",
+          "name": "bestBlockVerifierOnlinePercentageDelegateName",
           "desc": "The delegate that has the best block verifier online percentage"
         },{
-          "name": "best_block_verifier_online_percentage",
+          "name": "bestBlockVerifierOnlinePercentage",
           "desc": "The best block verifier online percentage by a delegate"
         },{
-          "name": "most_block_producer_total_rounds_delegate_name",
+          "name": "mostBlockProducerTotalRoundsDelegateName",
           "desc": "The delegate that has been the block producer the most"
         },{
-          "name": "most_block_producer_total_rounds",
+          "name": "mostBlockProducerTotalRounds",
           "desc": "The most block producer total rounds by a delegate"
         },{
-          "name": "current_block_height",
+          "name": "roundNumber",
           "desc": "The current block height"
         },{
           "name": "XCASH_DPOPS_round_number",
           "desc": "The current xcash proof of stake round number"
         },{
-          "name": "total_votes",
+          "name": "totalVotes",
           "desc": "The total amount of votes"
         },{
           "name": "XCASH_DPOPS_circulating_percentage",
@@ -59,28 +59,28 @@ export const API_DATA:any = [
       url: '/v1/xcash/dpops/unauthorized/delegates/active',
       result: [
         {
-          "name":"total_vote_count",
+          "name":"votes",
           "desc":"The total amount staked towards the delegate"
         },{
-          "name":"delegate_name",
+          "name":"delegateName",
           "desc":"The delegates name"
         },{
-          "name":"shared_delegate_status",
+          "name":"sharedDelegate",
           "desc":"True if this is a delegate that wants users to vote for them, false is this delegate does not want users to vote for them"
         },{
-          "name":"delegate_fee",
+          "name":"fee",
           "desc":"The fee in a percent"
         },{
-          "name":"block_verifier_score",
+          "name":"totalBlockProducerRounds",
           "desc":"How many invalid reserve proofs the delegate has found"
         },{
-          "name":"online_status",
+          "name":"online",
           "desc":"The current online status of the delegate"
         },{
-          "name":"block_verifier_total_rounds",
+          "name":"totalRounds",
           "desc":"The total rounds the delegate has been a block verifiers"
         },{
-          "name":"block_verifier_online_percentage",
+          "name":"onlinePercentage",
           "desc":"The total amount of rounds they were a block verifier and online / the total amount of rounds they were a block verifier"
         }
       ],
