@@ -46,9 +46,9 @@ export class statisticsComponent implements OnInit {
   	  this.httpdataservice.get_request(this.httpdataservice.GET_STATISTICS).subscribe(
     	  (res) => {
           var data = JSON.parse(JSON.stringify(res));
-            this.most_block_producer_total_rounds_delegate_name = data.most_block_producer_total_rounds_delegate_name;
+            this.most_block_producer_total_rounds_delegate_name = data.mostTotalRoundsDelegateName;
             //this.most_total_rounds_delegate_name = data.most_total_rounds_delegate_name;
-            this.most_block_producer_total_rounds = data.most_block_producer_total_rounds;
+            this.most_block_producer_total_rounds = data.mostTotalRounds;
             this.most_total_rounds = data.most_total_rounds;
       	  },
       	  (error) =>  {
