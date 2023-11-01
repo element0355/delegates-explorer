@@ -80,10 +80,10 @@ export class DelegatesComponent implements OnInit {
         let xcash_wallet_decimal_places_amount = this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT;
 
   	    for (count = 0; count < data.length; count++) {
-          current_delegate_total_vote_count = parseInt(data[count].total_vote_count) / xcash_wallet_decimal_places_amount;
-          status = data[count].online_status == 'true' ? 'Online'  : 'Offline';
-          mode = data[count].shared_delegate_status == 'solo' ? 'Solo' : data[count].shared_delegate_status == 'shared' ? 'Shared' : 'Group';
-  	      this.exampleDatabase.addUser((count + 1).toString(),data[count].delegate_name.toString(),status,mode,data[count].delegate_fee.toString(),data[count].block_verifier_total_rounds.toString(),data[count].block_verifier_online_percentage.toString(),current_delegate_total_vote_count.toString(),data[count].block_producer_total_rounds.toString());
+          current_delegate_total_vote_count = parseInt(data[count].votes) / xcash_wallet_decimal_places_amount;
+          status = data[count].online == 'true' ? 'Online'  : 'Offline';
+          mode = data[count].sharedDelegate == 'solo' ? 'Solo' : data[count].shared_delegate_status == 'shared' ? 'Shared' : 'Group';
+  	      this.exampleDatabase.addUser((count + 1).toString(),data[count].delegateName.toString(),status,mode,data[count].fee.toString(),data[count].totalRounds.toString(),data[count].onlinePercentage.toString(),current_delegate_total_vote_count.toString(),data[count].totalBlockProducerRounds.toString());
 
   	    }
 
