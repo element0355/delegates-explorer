@@ -14,7 +14,7 @@ import { environment } from './../../environments/environment';
 
 export class Delegates_informationComponent implements OnInit {
 
-    delegate_name:string = "Delegates Information";
+    delegateName:string = "Delegates Information";
     data;
 
     about:string;
@@ -27,11 +27,11 @@ export class Delegates_informationComponent implements OnInit {
     is_seednode:boolean = false;
 
     constructor(private route: ActivatedRoute, private httpdataservice: HttpdataService, private titleService:Title, public functionsService: FunctionsService) {
-        this.delegate_name = this.route.snapshot.queryParamMap.get("data");
-        if ( environment.seedNodes.includes(this.delegate_name)) {
+        this.delegateName = this.route.snapshot.queryParamMap.get("data");
+        if ( environment.seedNodes.includes(this.delegateName)) {
           this.is_seednode = true;
         }
-        this.titleService.setTitle( this.delegate_name +  "Delegate Information - " + environment.shortTitle + " - X-CASH" );
+        this.titleService.setTitle( this.delegateName +  "Delegate Information - " + environment.shortTitle + " - X-CASH" );
      }
 
 
