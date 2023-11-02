@@ -39,7 +39,7 @@ export class Delegates_informationComponent implements OnInit {
 
 
 
-      this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_INFORMATION + "?parameter1=" + this.delegate_name).subscribe(
+      this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_INFORMATION + "?parameter1=" + this.delegateName).subscribe(
         (res) => {
               var data = JSON.parse(JSON.stringify(res));
 
@@ -48,7 +48,7 @@ export class Delegates_informationComponent implements OnInit {
               this.website = data.website;
               this.team = data.team;
               this.shared_delegate_status = data.shared_delegate_status == 'solo' ? 'Solo' : data.shared_delegate_status == 'shared' ? 'Shared' : 'Group';
-              this.delegate_fee = data.delegate_fee;
+              this.delegate_fee = data.fee;
               this.server_specs = data.server_specs;
               this.public_address = data.public_address;
             },
