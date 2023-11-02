@@ -36,7 +36,7 @@ export class Delegates_statisticsComponent implements OnInit {
   ];
 
   title:string = "Delegates Statistics";
-  delegate_name:string = "";
+  delegateName:string = "";
 
   public displayedColumns = ['id', 'block_height'];
 	public exampleDatabase = new ExampleDatabase();
@@ -55,13 +55,13 @@ export class Delegates_statisticsComponent implements OnInit {
 
 	ngOnInit() {
 
-      this.delegate_name = this.route.snapshot.queryParamMap.get("data");
-      if ( environment.seedNodes.includes(this.delegate_name)) {
+      this.delegateName = this.route.snapshot.queryParamMap.get("data");
+      if ( environment.seedNodes.includes(this.delegateName)) {
         this.is_seednode = true;
       }
 
       // get the data
-    	this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_STATISTICS + "?parameter1=" + this.delegate_name).subscribe(
+    	this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_STATISTICS + "?parameter1=" + this.delegateName).subscribe(
   	   (res) =>	{
           this.exampleDatabase = new ExampleDatabase();
 
