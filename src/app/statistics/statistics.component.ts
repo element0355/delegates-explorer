@@ -90,7 +90,7 @@ export class statisticsComponent implements OnInit {
               return b.block_verifier_total_rounds - a.block_verifier_total_rounds;
             }).slice( 0, top_count);
 
-            this.most_total_rounds_delegate_name =  this.top_verifier[0]['delegate_name'];
+            this.most_total_rounds_delegate_name =  this.top_verifier[0]['delegateName'];
             this.delegate_most_total_rounds =  this.top_verifier[0]['block_verifier_total_rounds'];
 
             // Top Block Ratio List
@@ -102,7 +102,7 @@ export class statisticsComponent implements OnInit {
             }).slice( 0, top_count);
 
             var top_ratio_delegate = this.top_ratio[0];
-            this.top_ratio_delegate_name = top_ratio_delegate.delegate_name;
+            this.top_ratio_delegate_name = top_ratio_delegate.delegateName;
             this.top_ratio_block_ratio = Number.isNaN(top_ratio_delegate.block_ratio) ? "0" : top_ratio_delegate.block_ratio;
 
           },
