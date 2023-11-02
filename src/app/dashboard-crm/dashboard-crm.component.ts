@@ -109,7 +109,7 @@ export class DashboardCrmComponent implements OnInit {
           this.dashCard1[1].text = data.roundNumber;
           this.dashCard1[2].text = environment.totalBlockVerifiers;
           this.dashCard1[4].text = this.functionsService.get_lg_numer_format(parseInt(data.totalVotes) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
-          this.dashCard1[6].text = parseInt(data.XCASH_DPOPS_circulating_percentage);
+          this.dashCard1[6].text = parseInt(data.votePercentage);
         },
         (error) =>  {
           Swal.fire({
@@ -141,11 +141,11 @@ export class DashboardCrmComponent implements OnInit {
 
           for (count = 0 ; count < data2.length; count++)
           {
-            current_delegate_total_vote_count2 = parseInt(data2[count].total_vote_count) / xcash_wallet_decimal_places_amount;
+            current_delegate_total_vote_count2 = parseInt(data2[count].totalVotes) / xcash_wallet_decimal_places_amount;
             delegate_total_vote_count += current_delegate_total_vote_count2;
           }
 
-          this.dashCard1[8].text = this.functionsService.get_lg_numer_format(parseInt(data2[environment.totalBlockVerifiers - 1].total_vote_count) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT );
+          this.dashCard1[8].text = this.functionsService.get_lg_numer_format(parseInt(data2[environment.totalBlockVerifiers - 1].totalVotes) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT );
           // only use 45 to calculate this since there are no votes for the 5 seed nodes
           var avg_vote_count = this.functionsService.get_lg_numer_format(delegate_total_vote_count / environment.totalBlockVerifiers - 5);
           this.dashCard1[5].text = avg_vote_count;
