@@ -39,7 +39,7 @@ export class Delegates_informationComponent implements OnInit {
 
 
 
-      this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_INFORMATION + "?parameter1=" + this.delegateName).subscribe(
+      this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_INFORMATION + "/" + this.delegateName).subscribe(
         (res) => {
               var data = JSON.parse(JSON.stringify(res));
 
