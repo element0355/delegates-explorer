@@ -132,7 +132,7 @@ export const API_DATA:any = [
           "name": "IP_address",
           "desc": "The delegates IP address, or a domain name"
         },{
-          "name": "delegate_name",
+          "name": "delegateName",
           "desc": "The delegates name"
         },{
           "name": "about",
@@ -147,7 +147,7 @@ export const API_DATA:any = [
           "name": "shared_delegate_status",
           "desc": "True if this is a delegate that wants users to vote for them, false is this delegate does not want users to vote for them"
         },{
-          "name": "delegate_fee",
+          "name": "fee",
           "desc": "The fee in a percent"
         },{
           "name": "server_specs",
