@@ -206,7 +206,7 @@ export const API_DATA:any = [
       title: 'Get Delegates Information',
       description: 'Get informations about a delegate',
       method: 'GET',
-      url: '/getdelegatesinformation',
+      url: '/v1/xcash/dpops/unauthorized/delegates/',
       parameters: [
         { "name": "parameter1",
           "desc": " The delegates public address, or the delegates name."
