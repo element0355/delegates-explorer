@@ -61,7 +61,7 @@ export class Delegates_statisticsComponent implements OnInit {
       }
 
       // get the data
-    	this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_STATISTICS + "?parameter1=" + this.delegateName).subscribe(
+    	this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_STATISTICS + "/" + this.delegateName).subscribe(
   	   (res) =>	{
           this.exampleDatabase = new ExampleDatabase();
 
