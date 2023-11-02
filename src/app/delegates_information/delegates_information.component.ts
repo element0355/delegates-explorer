@@ -47,10 +47,10 @@ export class Delegates_informationComponent implements OnInit {
               this.about = data.about;
               this.website = data.website;
               this.team = data.team;
-              this.shared_delegate_status = data.shared_delegate_status == 'solo' ? 'Solo' : data.shared_delegate_status == 'shared' ? 'Shared' : 'Group';
+              this.shared_delegate_status = data.sharedDelegate == 'solo' ? 'Solo' : data.sharedDelegate == 'shared' ? 'Shared' : 'Group';
               this.delegate_fee = data.fee;
-              this.server_specs = data.server_specs;
-              this.public_address = data.public_address;
+              this.server_specs = data.specifications;
+              this.public_address = data.publicAddress;
             },
             (error) =>    {
               Swal.fire({
