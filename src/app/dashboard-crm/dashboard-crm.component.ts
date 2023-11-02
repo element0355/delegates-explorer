@@ -106,7 +106,7 @@ export class DashboardCrmComponent implements OnInit {
         (res) => {
           var data = JSON.parse(JSON.stringify(res));
           this.dashCard1[7].text = data.roundNumber;
-          this.dashCard1[1].text = data.roundNumber;
+          this.dashCard1[1].text = data.roundNumber - 1;
           this.dashCard1[2].text = environment.totalBlockVerifiers;
           this.dashCard1[4].text = this.functionsService.get_lg_numer_format(parseInt(data.totalVotes) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
           this.dashCard1[6].text = parseInt(data.votePercentage);
