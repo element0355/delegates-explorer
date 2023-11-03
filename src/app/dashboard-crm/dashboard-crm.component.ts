@@ -137,9 +137,9 @@ export class DashboardCrmComponent implements OnInit {
           let current_delegate_total_vote_count2 = 0;
           let xcash_wallet_decimal_places_amount = this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT;
 
-          this.dashCard1[3].text = data2.totalVotes;
+          this.dashCard1[3].text = data2.length;
 
-          for (count = 0 ; count < data2.totalVotes; count++)
+          for (count = 0 ; count < data2.length; count++)
           {
             current_delegate_total_vote_count2 = parseInt(data2[count].totalVotes) / xcash_wallet_decimal_places_amount;
             delegate_total_vote_count += current_delegate_total_vote_count2;
