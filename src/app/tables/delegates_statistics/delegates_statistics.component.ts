@@ -67,7 +67,7 @@ export class Delegates_statisticsComponent implements OnInit {
 
           var data = JSON.parse(JSON.stringify(res));
 
-          var block_producer_block_heights = data.block_producer_block_heights.split("|");
+          //var block_producer_block_heights = data.block_producer_block_heights.split("|");
           var block_reward;
           var count = 0;
 
@@ -80,19 +80,19 @@ export class Delegates_statisticsComponent implements OnInit {
 
           this.dashCard1[0].text = data.online == 'true' ? 'Online'  : 'Offline';
           this.dashCard1[1].text = parseInt(data.rank);
-          this.dashCard1[2].text = block_producer_block_heights.length-1;
+          //this.dashCard1[2].text = block_producer_block_heights.length-1;
           this.dashCard1[3].text = this.functionsService.get_lg_numer_format(parseInt(data.votes) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
 
           this.dashCard1[4].text = parseInt(data.onlinePercentage);
           this.dashCard1[5].text = parseInt(data.totalRounds);
           this.dashCard1[6].text = parseInt(data.totalBlockProducerRounds);
-          this.dashCard1[7].text = parseInt(data.block_verifier_score);
+          //this.dashCard1[7].text = parseInt(data.block_verifier_score);
 
           this.dashCard1[8].text = parseInt(data.totalRounds) / parseInt(data.totalBlockProducerRounds) * 100;
           this.dashCard1[9].text = data.totalRounds > 0 ? parseInt(data.totalBlockProducerRounds) / parseInt(data.totalRounds) : "0";
           this.dashCard1[11].text = data.fee == '' ? '0' : data.fee;
 
-          this.length = block_producer_block_heights.length - 1;
+          //this.length = block_producer_block_heights.length - 1;
           this.dataSource = new ExampleDataSource(this.exampleDatabase, this.paginator, this.sort);
 
           this.get_delegates_website_statistics();
