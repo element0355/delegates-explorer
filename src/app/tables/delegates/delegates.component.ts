@@ -69,7 +69,7 @@ export class DelegatesComponent implements OnInit {
 
 	get_delegates() {
     // get the data
-	  this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES).subscribe(
+	  this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_ONLINE).subscribe(
   	  (res) => {
         this.exampleDatabase = new DelegateDatabase();
         let data = JSON.parse(JSON.stringify(res));
@@ -82,7 +82,7 @@ export class DelegatesComponent implements OnInit {
   	    for (count = 0; count < data.length; count++) {
           current_delegate_total_vote_count = parseInt(data[count].votes) / xcash_wallet_decimal_places_amount;
           status = data[count].online == 'true' ? 'Online'  : 'Offline';
-          mode = data[count].sharedDelegate == 'solo' ? 'Solo' : data[count].shared_delegate_status == 'shared' ? 'Shared' : 'Group';
+          mode = data[count].sharedDelegate == 'solo' ? 'Solo' : data[count].sharedDelegate == 'shared' ? 'Shared' : 'Group';
   	      this.exampleDatabase.addUser((count + 1).toString(),data[count].delegateName.toString(),status,mode,data[count].fee.toString(),data[count].totalRounds.toString(),data[count].onlinePercentage.toString(),current_delegate_total_vote_count.toString(),data[count].totalBlockProducerRounds.toString());
 
   	    }
