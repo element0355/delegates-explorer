@@ -12,7 +12,7 @@ export class HttpdataService{
   GET_DELEGATES:string = environment.apiEndPoint + "/v1/xcash/dpops/unauthorized/delegates/active";
   GET_DELEGATES_STATISTICS:string = environment.apiEndPoint + "/v1/xcash/dpops/unauthorized/delegates";
   //GET_DELEGATES_STATISTICS:string = environment.apiEndPoint + "/getdelegatesstatistics";
-  GET_DELEGATES_INFORMATION:string = environment.apiEndPoint + "/getdelegatesinformation";
+  GET_DELEGATES_INFORMATION:string = environment.apiEndPoint + "/v1/xcash/dpops/unauthorized/delegates";
   GET_DELEGATES_VOTERS_LIST:string = environment.apiEndPoint + "/getdelegatesvoterslist";
   GET_ROUND_STATISTICS:string = environment.apiEndPoint + "/getroundstatistics";
   GET_PUBLIC_ADDRESS_PAYMENT_INFORMATION:string = environment.apiEndPoint + "/getpublicaddresspaymentinformation";
