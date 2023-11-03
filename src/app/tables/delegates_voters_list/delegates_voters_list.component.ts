@@ -47,7 +47,7 @@ export class Delegates_voters_listComponent implements OnInit {
 
 	ngOnInit() {
     this.delegateName = this.route.snapshot.queryParamMap.get("data");
-    if ( environment.seedNodes.includes(this.delegate_name)) {
+    if ( environment.seedNodes.includes(this.delegateName)) {
       this.is_seednode = true;
     }
 	  // get the data
