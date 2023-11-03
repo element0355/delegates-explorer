@@ -25,7 +25,7 @@ export class Delegates_voters_listComponent implements OnInit {
     ];
 
   title:string = "Delegates Voters List";
-  delegate_name:string = "";
+  delegateName:string = "";
 	total_vote_count:any = 0;
 	amount_of_votes:any = 0;
 	public_address:string;
