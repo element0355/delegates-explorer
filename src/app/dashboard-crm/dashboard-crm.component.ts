@@ -110,7 +110,7 @@ export class DashboardCrmComponent implements OnInit {
           this.dashCard1[2].text = environment.totalBlockVerifiers;
           this.dashCard1[4].text = this.functionsService.get_lg_numer_format(parseInt(data.totalVotes) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
           this.dashCard1[6].text = parseInt(data.votePercentage);
-          this.dashCard1[5].text = this.functionsService.get_lg_numer_format(parseInt(data2.averageVote) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
+          this.dashCard1[5].text = this.functionsService.get_lg_numer_format(parseInt(data.averageVote) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
         },
         (error) =>  {
           Swal.fire({
