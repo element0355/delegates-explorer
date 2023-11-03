@@ -71,12 +71,12 @@ export class Delegates_statisticsComponent implements OnInit {
           var block_reward;
           var count = 0;
 
-          for (count = 1; count < block_producer_block_heights.length; count++) {
-      	    this.exampleDatabase.addUser((count).toString(),block_producer_block_heights[count].toString(),"Block Producer");
-            if (count + 1 == block_producer_block_heights.length)  {
-              this.last_block_found = parseInt(block_producer_block_heights[count]);
-            }
-      	  }
+         // for (count = 1; count < block_producer_block_heights.length; count++) {
+      	 //   this.exampleDatabase.addUser((count).toString(),block_producer_block_heights[count].toString(),"Block Producer");
+         //   if (count + 1 == block_producer_block_heights.length)  {
+         //     this.last_block_found = parseInt(block_producer_block_heights[count]);
+         //   }
+      	 // }
 
           this.dashCard1[0].text = data.online == 'true' ? 'Online'  : 'Offline';
           this.dashCard1[1].text = parseInt(data.rank);
