@@ -52,7 +52,7 @@ export class DashboardCrmComponent implements OnInit {
 
     ngOnInit() {
 
-      this.get_delegates();
+      //this.get_delegates();
       this.get_statistics();
       this.get_blockheight();
       this.get_announcement();
