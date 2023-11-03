@@ -110,6 +110,7 @@ export class DashboardCrmComponent implements OnInit {
           this.dashCard1[2].text = environment.totalBlockVerifiers;
           this.dashCard1[4].text = this.functionsService.get_lg_numer_format(parseInt(data.totalVotes) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
           this.dashCard1[6].text = parseInt(data.votePercentage);
+          this.dashCard1[5].text = this.functionsService.get_lg_numer_format(parseInt(data2.averageVote) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
         },
         (error) =>  {
           Swal.fire({
@@ -148,7 +149,7 @@ export class DashboardCrmComponent implements OnInit {
           this.dashCard1[8].text = this.functionsService.get_lg_numer_format(parseInt(data2[environment.totalBlockVerifiers - 1](data2.totalVotes)) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT );
           // only use 45 to calculate this since there are no votes for the 5 seed nodes
           //var avg_vote_count = this.functionsService.get_lg_numer_format(delegate_total_vote_count / environment.totalBlockVerifiers - 3);
-          this.dashCard1[5].text = this.functionsService.get_lg_numer_format(parseInt(data2.averageVote) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT); //avg_vote_count;
+
 
         },
         (error) => {
