@@ -51,7 +51,7 @@ export class Delegates_voters_listComponent implements OnInit {
       this.is_seednode = true;
     }
 	  // get the data
-	  this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_VOTERS_LIST + "?parameter1=" + this.delegate_name).subscribe(
+	  this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_VOTERS_LIST + "/" + this.delegateName + "/1/2" +).subscribe(
 	  (res) => {
         this.exampleDatabase = new ExampleDatabase();
         var data = JSON.parse(JSON.stringify(res));
@@ -62,9 +62,9 @@ export class Delegates_voters_listComponent implements OnInit {
         var total;
 
         for (count = 0; count < this.amount_of_votes; count++) {
-          total = parseInt(data[count].total) / xcash_wallet_decimal_places_amount;
+          total = parseInt(data[count].amount) / xcash_wallet_decimal_places_amount;
           this.total_vote_count += parseInt(data[count].total);
-          this.exampleDatabase.addUser((count + 1).toString(), total.toString(), data[count].public_address_created_reserve_proof.toString(), data[count].reserve_proof.toString());
+          this.exampleDatabase.addUser((count + 1).toString(), total.toString(), data[count].publicAddress.toString(), data[count].reserveProof.toString());
   	    }
 
   	    this.dashCard[0].text = this.total_vote_count / xcash_wallet_decimal_places_amount;
