@@ -31,7 +31,7 @@ export class DashboardCrmComponent implements OnInit {
       { ogmeter: false,  width_icon: 25, text_size: 40, text: 0, suffix: '',title: 'NEXT RECALCULATING OF VOTES', icon: 'hourglass_empty' },
       { ogmeter: true,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'BLOCK HEIGHT', icon: 'assignment' },
       { ogmeter: true,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'TOTAL BLOCK VERIFIERS', icon: 'verified_user' },
-      { ogmeter: true,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'TOTAL DELEGATES', icon: 'groups' },
+      { ogmeter: true,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'TOTAL ONLINE DELEGATES', icon: 'groups' },
       { ogmeter: false,  width_icon: 25, text_size: 40, text: '-', suffix: '', title: 'TOTAL VOTES', icon: 'done_all' },
       { ogmeter: false,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'AVERAGE DELEGATE TOTAL VOTE', icon: 'signal_cellular_null' },
       { ogmeter: true,  width_icon: 25, text_size: 40, text: 0, suffix: '%', title: 'PoS CIRCULATING', icon: 'pie_chart' },
@@ -112,6 +112,7 @@ export class DashboardCrmComponent implements OnInit {
           this.dashCard1[6].text = parseInt(data.votePercentage);
           this.dashCard1[5].text = this.functionsService.get_lg_numer_format(parseInt(data.averageVote) / this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT);
           this.dashCard1[8].text = data.totalVoters;
+          this.dashCard1[3].text = data.totalOnlineDelegates;
         },
         (error) =>  {
           Swal.fire({
