@@ -46,7 +46,7 @@ export class Delegates_voters_listComponent implements OnInit {
 	@ViewChild('filter') filter: ElementRef;
 
 	ngOnInit() {
-    this.delegate_name = this.route.snapshot.queryParamMap.get("data");
+    this.delegateName = this.route.snapshot.queryParamMap.get("data");
     if ( environment.seedNodes.includes(this.delegate_name)) {
       this.is_seednode = true;
     }
