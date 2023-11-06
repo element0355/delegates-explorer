@@ -56,7 +56,7 @@ export class Delegates_voters_listComponent implements OnInit {
         this.exampleDatabase = new ExampleDatabase();
         var data = JSON.parse(JSON.stringify(res));
   	    this.total_vote_count = 0;
-  	    this.amount_of_votes = data.length;
+  	    this.amount_of_votes = data.amount;
         let xcash_wallet_decimal_places_amount = this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT;
   	    var count = 0;
         var total;
