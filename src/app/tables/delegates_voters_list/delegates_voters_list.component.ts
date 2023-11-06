@@ -56,14 +56,14 @@ export class Delegates_voters_listComponent implements OnInit {
         this.exampleDatabase = new ExampleDatabase();
         var data = JSON.parse(JSON.stringify(res));
   	    this.total_vote_count = 0;
-  	    this.amount_of_votes = data.amount;
+  	    this.amount_of_votes = data.length;
         let xcash_wallet_decimal_places_amount = this.httpdataservice.XCASH_WALLET_DECIMAL_PLACES_AMOUNT;
   	    var count = 0;
         var total;
 
         for (count = 0; count < this.amount_of_votes; count++) {
           total = parseInt(data[count].amount) / xcash_wallet_decimal_places_amount;
-          this.total_vote_count += parseInt(data[count].total);
+          this.total_vote_count += parseInt(data[count].amount);
           this.exampleDatabase.addUser((count + 1).toString(), total.toString(), data[count].publicAddress.toString(), data[count].reserveProof.toString());
   	    }
 
