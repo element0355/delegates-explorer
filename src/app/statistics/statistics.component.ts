@@ -73,7 +73,7 @@ export class statisticsComponent implements OnInit {
             let data = JSON.parse(JSON.stringify(res));
 
             var result = data.filter(function(d) {
-              var delegate = d.delegate_name;
+              var delegate = d.delegateName;
               return !environment.seedNodes.includes(delegate);
             });
 
