@@ -51,7 +51,7 @@ export class Delegates_voters_listComponent implements OnInit {
       this.is_seednode = true;
     }
 	  // get the data
-	  this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_VOTERS_LIST + "/" + this.delegateName + "/1/2").subscribe(
+	  this.httpdataservice.get_request(this.httpdataservice.GET_DELEGATES_VOTERS_LIST + "/" + this.delegateName + "/0/1000").subscribe(
 	  (res) => {
         this.exampleDatabase = new ExampleDatabase();
         var data = JSON.parse(JSON.stringify(res));
