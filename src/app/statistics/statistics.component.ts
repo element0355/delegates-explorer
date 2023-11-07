@@ -82,12 +82,12 @@ export class statisticsComponent implements OnInit {
 
             // Top Block Producer List
             this.top_producer = [...result].sort(function(a, b) {
-              return b.block_producer_total_rounds - a.block_producer_total_rounds;
+              return b.totalRounds - a.totalRounds;
             }).slice( 0, top_count);
 
             // Top Block Verifier List
             this.top_verifier = [...result].sort(function(a, b) {
-              return b.block_verifier_total_rounds - a.block_verifier_total_rounds;
+              return b.totalBlockProducerRounds - a.totalBlockProducerRounds;
             }).slice( 0, top_count);
 
             this.most_total_rounds_delegate_name =  this.top_verifier[0]['delegateName'];
@@ -95,7 +95,7 @@ export class statisticsComponent implements OnInit {
 
             // Top Block Ratio List
             [...result].forEach(function(item) {
-               item.block_ratio = item.block_producer_total_rounds / item.block_verifier_total_rounds * 100;
+               item.block_ratio = item.totalBlockProducerRounds / item.totalRounds * 100;
             });
             this.top_ratio = result.sort(function(a, b) {
               return b.block_ratio - a.block_ratio;
