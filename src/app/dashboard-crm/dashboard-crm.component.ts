@@ -37,7 +37,7 @@ export class DashboardCrmComponent implements OnInit {
       { ogmeter: true,  width_icon: 25, text_size: 40, text: 0, suffix: '%', title: 'PoS CIRCULATING', icon: 'pie_chart' },
       { ogmeter: true,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'DPoPS ROUND NUMBER', icon: 'autorenew' },
       { ogmeter: false,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'TOTAL VOTERS', icon: 'swap_vert' },
-      { ogmeter: false,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'BLOCK REWARDssss ', icon: 'toll' },
+      { ogmeter: false,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'BLOCK REWARD', icon: 'toll' },
       { ogmeter: false,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'BLOCK TIME ', icon: 'timelapse' },
       { ogmeter: false,  width_icon: 25, text_size: 40, text: 0, suffix: '', title: 'EST. BLOCK PER DAY ', icon: 'view_week' },
     ];
